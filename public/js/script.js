@@ -10,7 +10,7 @@ troolyApp.controller('troolyAppCtrl',['$scope','$sce','$http', function($scope,$
 
     $scope.getPhoneNumbers = function(){
        
-       if ($scope.urlToLoad.indexOf('http://')!=0) {
+       if ($scope.urlToLoad.indexOf('http://')!=0 && $scope.urlToLoad.indexOf('https://')) {
             $scope.urlToLoad = 'http://'+$scope.urlToLoad;
         }
 
