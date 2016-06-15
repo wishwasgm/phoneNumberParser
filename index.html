@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+
+
+<html class="no-js" ng-app="troolyApp"> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trooly Phone number search</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/styles.css"/>
+
+
+</head>
+<body ng-controller="troolyAppCtrl">
+
+    <div class="container-table">
+        <div class="row vertical-center-row">
+            <div>
+                <label>URL</label>
+                <input style="width:60%" type="text" name="urlToLoad" ng-model="urlToLoad"></input>
+                <button class="btn btn-primary" ng-click="getPhoneNumbers()">Go</button>
+
+                <div class="row results-list">
+                    <ul class="list-group">
+                      <li class="list-group-item" ng-repeat="phoneNum in phoneNumbersWithCount">
+                        <span class="label label-default label-pill pull-xs-right">{{phoneNum.count}}</span>
+                        {{phoneNum.number}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<br/>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

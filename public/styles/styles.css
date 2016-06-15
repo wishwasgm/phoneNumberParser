@@ -1,0 +1,18 @@
+ html, body, .container-table {
+    height: 100%;
+    width: 100%;
+    padding-left: 50px;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    padding-top: 200px;
+}
+
+.results-list {
+    display: table-cell;
+    padding-top: 30px;
+    width: 650px;
+}
